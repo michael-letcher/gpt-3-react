@@ -1,0 +1,50 @@
+@use '../../styles/breakpoints.scss';
+
+.gpt3__article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  font-family: var(--font-family);
+
+  &:hover {
+    .gpt3__article-content {
+      background-color: white;
+      color: var(--color-footer);
+    }
+  }
+
+  &-image,
+  &-image img {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 190px;
+
+    height: 100%;
+    padding: 1rem 1.5rem;
+
+    transition: all 0.3s ease-in-out;
+    color: white;
+    background-color: var(--color-footer);
+
+    &-date {
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 2rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      line-height: 1.85rem;
+    }
+  }
+}

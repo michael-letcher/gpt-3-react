@@ -1,0 +1,64 @@
+@use '../../styles/breakpoints.scss';
+
+.gpt3__blog {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+
+  &-heading {
+    h1 {
+      font-family: var(--font-family);
+      font-size: 3.875rem;
+      font-weight: 800;
+      line-height: 4.875rem;
+      letter-spacing: -2.48px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    gap: 3rem;
+
+    &-hero {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    &-articles {
+      flex: 40%;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+
+      .gpt3__article {
+        max-width: 400px;
+
+        &-image {
+          height: 130px;
+        }
+      }
+    }
+  }
+
+  @include breakpoints.xl {
+    &-container-articles {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include breakpoints.lg {
+    &-container {
+      flex-direction: column;
+      align-items: center;
+
+      .gpt3__article-image {
+        height: unset;
+      }
+
+      &-articles {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.gpt3 {
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 6rem;
+  }
+
+  &__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &_logo {
+      margin-right: 2rem;
+
+      img {
+        width: 62.56px;
+        height: 16.02px;
+      }
+    }
+
+    &_container {
+      display: flex;
+    }
+  }
+
+  &__navbar-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__navbar-links_container,
+  &__navbar-sign,
+  &__navbar-menu_container {
+    p {
+      font-family: var(--font-family);
+      font-family: 500;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+      text-transform: capitalize;
+      color: white;
+      margin: 0 1rem;
+      cursor: pointer;
+    }
+  }
+
+  &__navbar-sign,
+  &__navbar-menu_container {
+    button {
+      cursor: pointer;
+      border-radius: 0.25rem;
+      color: white;
+      padding: 1rem 2rem;
+      background-color: var(--primary-button-bg);
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+      border: none;
+    }
+  }
+
+  &__navbar-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+
+    svg {
+      cursor: pointer;
+    }
+
+    &_container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: column;
+
+      text-align: end;
+      background: var(--color-footer);
+      padding: 2rem;
+      position: absolute;
+      right: 0;
+      top: 2.5rem;
+      margin-top: 1rem;
+      min-width: 210px;
+      border-radius: 0.25rem;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+      p {
+        margin: 0 1rem;
+      }
+
+      &-links-sign {
+        display: none;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1050px) {
+  .gpt3 {
+    &__navbar-links_container {
+      display: none;
+    }
+
+    &__navbar-menu {
+      display: flex;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 700px) {
+  .gpt3 {
+    &__navbar {
+      padding: 2rem 4rem;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 550px) {
+  .gpt3 {
+    &__navbar {
+      padding: 2rem;
+
+      &-sign {
+        display: none;
+      }
+
+      &-menu_container {
+        top: 1.25rem;
+      }
+    }
+  }
+}

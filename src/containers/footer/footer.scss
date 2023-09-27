@@ -1,0 +1,31 @@
+.gpt3__footer {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      margin: auto;
+      max-width: 820px;
+      text-align: center;
+      font-size: 3.875rem;
+      font-weight: 800;
+      line-height: 4.6875rem;
+      letter-spacing: -2.48px;
+    }
+
+    button {
+      //   tex
+    }
+  }
+
+  &-links {
+    display: flex;
+  }
+}
