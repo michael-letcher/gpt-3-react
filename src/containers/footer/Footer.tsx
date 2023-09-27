@@ -2,6 +2,7 @@ import logo from '../../assets/logo.svg';
 import './footer.scss';
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="gpt3__footer section__padding">
       <div className="gpt3__footer-heading">
@@ -45,7 +46,7 @@ export default function Footer() {
       </div>
 
       <div className="gpt3__footer-copyright">
-        <span>© 2021 GPT-3. All rights reserved.</span>
+        <span>© {year} GPT-3. All rights reserved.</span>
       </div>
     </footer>
   );
